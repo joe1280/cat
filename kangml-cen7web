@@ -64,25 +64,6 @@ function shellhead() {
 	uploadfile=kangml-openvpn.tar.gz;
 	return 1
 }
-function authentication() {
-echo 
-echo -n -e "请输入我们群号 [\033[32m $key \033[0m] ："
-read PASSWD
-readkey=$PASSWD
-if [[ ${readkey%%\ *} == $key ]]
-    then
-        echo 
-		echo -e '\033[32m授权成功！\033[0m即将开始搭建...'
-		sleep 3
-    else
-        echo
-		echo -e '\033[31m授权失败\033[0m'
-		sleep 3
-echo "$keyerrorlogo";
-exit
-fi
-return 1
-}
 function InputIPAddress() {
 
 echo 
